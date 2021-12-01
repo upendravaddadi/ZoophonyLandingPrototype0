@@ -1,0 +1,439 @@
+/* GENERAL ------------------------------------------------- */
+
+html    {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body    {
+    background: linear-gradient(to bottom, whitesmoke, darkblue, whitesmoke, darkblue, whitesmoke);
+	background-size: 100%;
+	background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    max-height: 100%;    
+    display: flex;
+    flex-direction: column;
+}
+
+body:before{
+	content:'';
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: -1;
+	background: linear-gradient(to bottom right, rgba(0,0,139,0.7), black, darkblue);
+}
+
+
+*{
+    -webkit-box-shadow: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+
+/* FONTS ------------------------------------------------- */
+
+@font-face {
+    font-family: 'Necto Mono';
+    src: 'fonts/Necto-Mono.woff' format('woff');
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Red Hat Mono', monospace;
+    src: url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap")
+}
+
+/*General Font Scheme*/
+
+.bodytext1 {    
+    color:whitesmoke;
+    font-family: 'Necto Mono', monospace;
+    text-align: left;
+    line-height: 1.1;
+    padding:1vw;
+}
+
+ 
+.bodytext2 {
+    
+    color:whitesmoke;
+    font-family: 'Necto Mono', monospace;
+    text-align: center;
+    line-height: 1.1;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    
+}
+
+/* 0 - Nav Menu Section ------------------------------------------------- */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;   
+  text-decoration: none;
+    
+}
+
+li {
+  display: inline;
+  text-decoration: none;
+    background: none;
+    width: 10vw;
+    padding-left:0.5vw;
+    padding-right:0.5vw;
+}
+
+.nav_menu{
+    min-width: 100vw;
+    min-height: 2vw;
+    position: fixed;
+    z-index: 20;
+    background: whitesmoke;
+    box-shadow: 0 0 10px 10px whitesmoke;
+    padding-top: 0.25vw;
+    text-align: center;   
+    text-decoration: none;
+    font-family: 'Necto Mono', monospace;
+    
+    
+
+    
+}
+
+/* 1 - HERO Section ------------------------------------------------- */
+
+.div.container_strip {
+    position: relative;
+}
+
+
+div.bg_grid{
+    background-color;
+    opacity: 0.2;
+    background-image:  linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(to right, #ffffff 1px, #000000 1px);
+    background-size: 10vw 10vw;
+    min-height: 100vh;    
+}
+
+.hero-content {
+    position: absolute;
+    top:0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+
+h1 {
+    padding:0;
+    margin:0;    
+}
+
+.zoophonytitle {
+    color:whitesmoke;
+    font-family: "Red Hat Mono", monospace;
+    text-align: center;
+    letter-spacing: -1vw;
+    line-height: 0.9;
+    text-shadow:0 0 25px whitesmoke, 0 0 5px whitesmoke;
+    user-select: none;
+    opacity: 1;
+    width: 100vw;
+    height:30vw;
+    padding-top: 10vw;
+
+}
+
+.herobodytext {
+    height: auto;
+    width: 80vw;
+    color:whitesmoke;
+    font-family: 'Necto Mono', monospace;
+    text-align: center;
+    line-height: 1.1;
+    padding:0vw;
+    margin: auto;
+    z-index: 10;
+}
+
+.sparrow_hawk{
+width:30vw;
+height: 20vw;    
+}
+
+.rabbit{
+width:40vw;
+height: 20vw; 
+align-items: right;   
+}
+
+ model-viewer#reveal {
+    --poster-color: transparent;
+  }
+
+/* 2 - ZOOPHONY DESCRIPTION Section ------------------------------------------------- */
+
+
+.text_box {    
+    background: black;
+    box-shadow: 0 0 200px 50px white;
+    padding: 4vw; 
+}
+
+
+
+
+/* 3 - ABOUT THE ARTISTS Section ------------------------------------------------- */
+
+.container_strip2 {
+    box-shadow: 0 0 200px 50px darkblue;
+    
+}
+.artists_title {    
+    background: black;
+    padding: 2vw;
+    padding-top: 3vw;  
+    border-bottom: 2px solid whitesmoke;
+}
+
+.title_text01 {
+    color:whitesmoke;
+    font-family: 'Necto Mono', sans-serif;
+    line-height: 1.1;
+    margin: 1vw;
+    text-align: center;
+}
+
+/* Accordion Menu */
+
+.accordion {
+    background-color: black;
+    color: whitesmoke;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: 0.4s;
+    font-family: 'Necto Mono';    
+    outline:none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid whitesmoke;
+    margin:0;
+    padding-left: 4vw;
+    padding-right:4vw;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.active, .accordion:hover {
+    background-color: whitesmoke;
+    color: darkblue;
+    margin:0;
+}
+
+ .active{
+     border-top: 2px solid black;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: whitesmoke;
+  font-weight: bold;
+  margin-left: 5px;
+  margin:0; 
+  padding-top: 2vw;    
+
+}
+
+.active:after {
+  content: "\2212";
+  color: darkblue;
+  padding-top: 2vw;
+}   
+   
+
+.panel {
+    padding: 0;
+    background-color: whitesmoke;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    flex-wrap: wrap;
+    flex-direction: row;    
+}
+
+
+.row {
+  display: flex;
+  border-top: 2px solid black; 
+}
+
+
+.artist_bio {
+  background-color: whitesmoke;
+  height: auto;
+  padding: 2.5vw;
+  padding-bottom: 4vw;
+
+}
+
+.artist_bio .bodytext2 {
+    color: darkblue;
+}
+
+.artist_image {   
+  background-color: whitesmoke;
+  border-right: 2px solid black;
+    width:30vw;
+
+}
+
+img {
+    display: block; 
+    margin: 0 auto;
+    width: 30vw;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+
+}
+
+/* 4 - EXPERIENCE Section  ------------------------------------------------- */
+
+div.bg_grid2{
+    background-color;
+    opacity: 0.2;
+    background-image:  linear-gradient(#ffffff 2px, transparent 2px), linear-gradient(to right, #ffffff 2px, #000000 2px);
+    background-size: 10vw 10vw;
+    min-height: 100vh; 
+}
+
+.experience_container_strip{
+ position: relative;
+    min-height:100vh; width:100vw;
+}
+
+.experience{
+    position: absolute;
+    top:0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;     
+}
+
+.tiger{
+width:40vw;
+height: 25vw; 
+}
+
+.blank{
+    width:60vw;
+    height:25vw;
+    background: transparent;
+    border: none;
+}
+
+.experience_button{
+    width: 60vw;
+    height:10vw;
+    margin-left:20vw;
+    margin-right: 20vw;
+    border-radius:3vw;
+    border:none;
+    background: whitesmoke;
+    box-shadow: 0 0 10px 10px whitesmoke;
+    z-index:20;
+    font-family:'Necto Mono', monospace;
+    font-size: 4vw;
+    color: darkblue;
+    cursor: pointer;
+}
+
+.experience_button:hover{
+    border:none;
+    background-color: greenyellow;
+    box-shadow: 0 0 10px 10px greenyellow;
+}
+
+
+/* 5 - COLOPHON Section  ------------------------------------------------- */
+
+
+.colophon_container_strip {
+    position: relative;
+    height: 100vh;
+    width:100vw;
+    background: black;
+    box-shadow: 0 0 200px 50px whitesmoke;
+}
+
+
+.colophon_text{
+        padding: 4vw;
+    color:white;
+}
+
+
+/* RESPONSIVE  ------------------------------------------------- */
+
+@media screen and (min-width: 640px) {
+        div.zoophonytitle {font-size: 6vw;}
+        p.herobodytext {font-size: 1.5vw;}
+        p.bodytext1 {font-size: 2.2vw;} 
+        p.bodytext2 {font-size: 1.5vw;}
+        .nav_menu {font-size: 1.5vw;}
+        .title_text01 {font-size: 1.vw;}
+        .accordion {font-size: 2vw;} 
+        .text_box {font-size: 2.2vw; min-height:100vh;}
+        .panel {flex-wrap: nowrap;} 
+        .sparrow_hawk{flex-wrap: nowrap;}
+        .rabbit{flex-wrap: nowrap;}
+        
+}
+
+@media screen and (max-width: 640px) {
+        div.zoophonytitle {font-size: 7vw;}
+        p.herobodytext {font-size: 3vw;}
+        p.bodytext1 {font-size: 3vw;}
+        p.bodytext2 {font-size: 3vw;}
+        .nav_menu {font-size: 2vw;}
+
+    
+        .title_text01 {font-size: 1.5vw;}
+        .accordion {font-size: 3vw;}
+        div.text_box {font-size: 4vw; min-height:auto;}
+       .row{flex-direction: column; border:none;}
+       .artist_image{width:100vw; padding-top: 2vw; border: none;}
+        img{border: none; width:60vw;}
+   
+            .sparrow_hawk{min-width: 50vw; min-height: 50vw;}
+        .rabbit{min-width: 50vw; min-height: 50vw;}
+}
+
+@media screen and (min-width: 1000px) {
+        div.container_strip  {min-height:auto; width:100vw;}
+        div.container_strip2  {min-height:auto; width:100vw;}
+        div.colophon_container_strip  {min-height:100vh; width:100vw;}
+
+
+}
+
+@media screen and (max-width: 1000px) {
+    div.container_strip {min-height:auto; width:100vw;}
+    div.container_strip2 {min-height:auto; width:100vw;}  
+    div.colophon_container_strip {min-height:auto; width:100vw;}
+
+}
